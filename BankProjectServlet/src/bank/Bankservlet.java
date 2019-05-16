@@ -87,7 +87,7 @@ public class Bankservlet extends HttpServlet {
 					
 					DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 					Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-					String sql="insert into sangeetha.My_profile values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					String sql="insert into hemapractice.My_profiles values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 					PreparedStatement ps=c.prepareStatement(sql);
 					ps.setLong(1, accountnumber);
 					ps.setString(2, firstname);
@@ -114,6 +114,7 @@ public class Bankservlet extends HttpServlet {
 				         out.println("alert('Password :"+password+"');");
 				         out.println("alert('Account Number :"+accountnumber+"');");
 				         out.println("</script>");
+				         out.print("<table><tr><td>UserId</td><td>"+userid+"+</td></tr>");
 					}
 					
 					else

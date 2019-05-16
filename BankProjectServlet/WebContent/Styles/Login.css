@@ -1,27 +1,31 @@
-@CHARSET "ISO-8859-1";
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-{
-    margin: 0;
-    padding: 0;
-   
-}
+
 .login-box{
- 
-  position: absolute;
-  top: 45%;
-  left: 80%;
-  transform: translate(-50%,-50%);
-  color: brown;
-   width:300px;
-   
+    width: 320px;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.1);
+    color: bisque;
+    top: 50%;
+    left: 85%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 20%;
 }
-.login-box h1{
-  
-  font-size: 30px;
- 	margin-bottom: 50px;
-  padding: 13px 0;
- 
-  
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 }
 .textbox{
   width: 100%;
@@ -29,41 +33,49 @@
   font-size: 20px;
   padding: 8px 0;
   margin: 5px 0;
-  border: 1px solid #4c78af99;
+ border: 1px solid #4c78af99;
 }
 .textbox i{
    width: auto;
     float: left;
     text-align: -webkit-auto;
 }
-.gender{
-  width: 100%;
-  overflow: hidden;
-  font-size: 15px;
-  padding: 8px 0;
-  margin: 8px 0;
-  border: 1px solid #4c78af99;
-}
-.gender i{
-  width: 26px;
-  float: left;
-  text-align: center;
-}
 .textbox input{
-  border:none;
+  border: none;
   outline: none;
   background: none;
-  color: rgba(0, 0, 0, 0.7);
+  color:ghostwhite;
   font-size: 18px;
-  width: 80%;
+  width: 50%;
   float: left;
   margin: 0 10px;
 }
+
+.logins-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.2);;
+}
+.logins-box a:hover
+{
+    color: blue;
+}
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
 .btn{
   width: 100%;
   background: none;
-  border:;
-  color: brown;
+  border: 2px solid #4caf50;
+  color: white;
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
@@ -79,33 +91,78 @@
 .login-box a{
     text-decoration: none;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.54);;
+    color: #fff;
 }
 .login-box a:hover
 {
-    color: blue;
+    color: #39dc79;
 }
-
-.footer
-{
-
-margin-left: auto;
-margin-bottom:0;
-width:100%;
-height:1%;
-position:absolute;
-text-align: right;
-color:rgba(0, 0, 0, 0.54);
-	
-}
-
 .logo img
 {
-margin-top:-15px;
-    margin-left: 800px;
-    height: 138px;
+margin-top:-10px;
+    margin-left: 1px;
+    height: 100px;
     transition: .5%;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

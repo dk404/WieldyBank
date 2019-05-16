@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<link rel="stylesheet" href="./Styles/Login.css" type="text/css">
+<link rel="stylesheet" href="./Styles/password.css" type="text/css">
 <link rel="stylesheet" href="./Styles/Themess.css">
 <link rel="stylesheet" href="./Styles/Fontscss.css">
 </head>
@@ -30,7 +30,7 @@ background-size: cover;"
 >
 
 <form action="Passwordservlet" method="post">
-<div class="login-box">
+<div class="logins-box">
 <h1 align="center">Change Password</h1></center> 
 
 	<div class="textbox">

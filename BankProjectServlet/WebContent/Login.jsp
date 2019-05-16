@@ -9,30 +9,24 @@
 <link rel="stylesheet" href="./Styles/Themess.css">
 <link rel="stylesheet" href="./Styles/Fontscss.css">
 </head>
-<body style="font-family:sans-serif;
-text-indent:inherit;
-color:white;
-font-size:x-large;
-min-height: 100%;
-min-width: 1024px;
-width: 100%;
-height: auto;
-position: fixed;
-top: auto;
-left: 0;
-background-image: url(Images/final.jpg);
- background-repeat: no-repeat;
-
- -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;"
+<body 
 >
+<style>
+body{
+background-image: url("./Images/bgimage.jpg");
+   background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style>
+<form>
 <div class="logo">
 <img src="./Images/logo.png">
-
 <div class="login-box">
-<h1 align="center">Login</h1></center> 
+<img src="./Images/avatar.png" class="avatar">
+
+<h3 align="center">Login Here</h3> 
   <div class="textbox">
     <i class="fas fa-user"></i>
     <input type="text" placeholder="Username" name="uname">
@@ -44,10 +38,9 @@ background-size: cover;"
   </div>
 
   <input type="submit" class="btn" value="Sign in">
-  <label><a href="#">Forgot password?</a>
- <span><a align="left" href="Registration.jsp"> New Register?</a></span>
- 
+  <table cellspacing="15"><td><a align="left" href="#">Forgot password?</a><span></td><td><a href="Registration.jsp"> New Register?</a></span></td>
+ </table>
  </div>
-
+</form>
   </body>
 </html>

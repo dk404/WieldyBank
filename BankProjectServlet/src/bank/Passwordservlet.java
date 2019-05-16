@@ -53,7 +53,7 @@ public class Passwordservlet extends HttpServlet {
 			{
 			DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 			Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-			String sql="update Sangeetha.my_profile set password=? where userid=?";
+			String sql="update Hemapractice.my_profiles set password=? where userid=?";
 			PreparedStatement ps=c.prepareStatement(sql);
 			ps.setString(1, confirmpassword);
 			ps.setString(2, userid);
