@@ -13,7 +13,7 @@
 >
 <style>
 body{
-background-image: url("./Images/bgimage.jpg");
+background-image: url("./Images/final.jpg");
    background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,8 +29,7 @@ background-image: url("./Images/bgimage.jpg");
 <h3 align="center">Login Here</h3> 
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" placeholder="Username" name="uname">
-  </div>
+    <input type="text" placeholder="Username" name="userid">  </div>
 
   <div class="textbox">
     <i class="fas fa-lock"></i>

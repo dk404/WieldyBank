@@ -87,7 +87,7 @@ public class Bankservlet extends HttpServlet {
 					
 					DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 					Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-					String sql="insert into hemapractice.My_profiles values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					String sql="insert into hemaa.My_profiles values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 					PreparedStatement ps=c.prepareStatement(sql);
 					ps.setLong(1, accountnumber);
 					ps.setString(2, firstname);
@@ -103,10 +103,11 @@ public class Bankservlet extends HttpServlet {
 					ps.setString(11,mailid);
 					ps.setString(12, userid);
 					ps.setString(13, password);
+					ps.setLong(14, accountnumber);
 					int result=ps.executeUpdate();
 					if(result>0)
 					{
-						request.getRequestDispatcher("Password.jsp").include(request,response); 
+						request.getRequestDispatcher("userid.jsp").include(request,response); 
 						 out.println("<html><body>");
 				         out.println("<script type=\"text/javascript\">");
 				         out.println("alert('Successfully Created');");
@@ -114,7 +115,7 @@ public class Bankservlet extends HttpServlet {
 				         out.println("alert('Password :"+password+"');");
 				         out.println("alert('Account Number :"+accountnumber+"');");
 				         out.println("</script>");
-				         out.print("<table><tr><td>UserId</td><td>"+userid+"+</td></tr>");
+				       
 					}
 					
 					else
