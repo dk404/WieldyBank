@@ -17,7 +17,7 @@ body{
   background-attachment: fixed;
 }
 </style>
-<form action="Passwordservlet" method="post">
+<form action="Mailservlet" method="post">
 <div class="logins-box">
 <h1 align="center">E-mail Update</h1></center> 
 
@@ -26,13 +26,17 @@ body{
     <input type="text" placeholder="Enter your UserID" name="userid">
   </div>
   <div class="textbox">
-    <i class="fas fa-lock"></i>
-    <input type="email" placeholder="Current Email-ID" name="email">
+    <i class="fas fa-mail-bulk"></i>
+    <input type="email" placeholder="Current Email-ID" name="mailid">
   </div>
 
   <div class="textbox">
-    <i class="fas fa-lock"></i>
-    <input type="email" placeholder="New Email-ID" name="email">
+    <i class="fas fa-mail-bulk"></i>
+    <input type="email" placeholder="New Email-ID" name="nmailid">
+  </div>
+  <div class="textbox">
+    <i class="fas fa-mail-bulk"></i>
+    <input type="email" placeholder="New Email-ID" name="n1mailid">
   </div>
    
   <input type="submit" class="btn" value="Submit">

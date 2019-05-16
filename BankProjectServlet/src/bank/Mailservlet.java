@@ -15,17 +15,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Passwordservlet
+ * Servlet implementation class Mailservlet
  */
-@WebServlet("/Passwordservlet")
-public class Passwordservlet extends HttpServlet {
+@WebServlet("/Mailservlet")
+public class Mailservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Passwordservlet() {
+    public Mailservlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -47,11 +46,10 @@ public class Passwordservlet extends HttpServlet {
 		{
 			PrintWriter out=response.getWriter();
 			String userid=request.getParameter("userid");
-			String currentpassword=request.getParameter("cpwd");
-			String newpassword=request.getParameter("npwd");
-			String confirmpassword=request.getParameter("n1pwd");
-			
-			if(newpassword.equals(confirmpassword))
+			String currentmailid=request.getParameter("mailid");
+			String newmailid=request.getParameter("nmailid");
+			String confirmmailid=request.getParameter("n1mailid");
+			if(newmailid.equals(confirmmailid))
 			{
 			System.out.println("hai");
 			DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
@@ -62,15 +60,11 @@ public class Passwordservlet extends HttpServlet {
 			ResultSet rs=ps.executeQuery();
 			if(rs.next())
 			{
-			System.out.println(rs.getString("password"));
-			System.out.println(1);
-			System.out.println(currentpassword);
-			if(rs.getString("password").equals(currentpassword))
+			if(rs.getString("mailid").equals(currentmailid))
 			{
-				System.out.println("hello");
-			String sqll="update Hemaa.my_profiles set password=? where userid=?";
+			String sqll="update Hemaa.my_profiles set mailid=? where userid=?";
 			PreparedStatement ps1=c.prepareStatement(sqll);
-			ps1.setString(1, confirmpassword);
+			ps1.setString(1, confirmmailid);
 			ps1.setString(2, userid);
 			int result=ps1.executeUpdate();
 			if(result>0)
@@ -85,8 +79,8 @@ public class Passwordservlet extends HttpServlet {
 			
 			else
 			{
-				 out.println("alert('Invalid password or UserId');");
-				 response.sendRedirect("Password.jsp");
+				 out.println("alert('Invalid MailId or UserId');");
+				 response.sendRedirect("mail.jsp");
 			}
 			}
 		}
@@ -99,7 +93,5 @@ public class Passwordservlet extends HttpServlet {
 		}
 		
 	
-		
-	}
 
-
+}
