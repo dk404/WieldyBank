@@ -75,7 +75,7 @@ public class Bankservlet extends HttpServlet {
 		 String a1=s1.substring(0, 4);
 		 StringBuffer sb= new StringBuffer(a1);
 		 StringBuffer sb1=(sb.reverse());
-		int a=(int) ((Math.random()*9000000)+1000000);
+		 int a=(int) ((Math.random()*9000000)+1000000);
 		 String r2=Integer.toString(a);
 		 String password=(firstname.substring((firstname.length()-2), firstname.length()))+lastname.substring(0,2)+(idnumber.substring(0, 2))+mob1+sb1;
 		 String userid=(firstname.substring(0, 2))+(lastname.substring((lastname.length()-2), lastname.length()))+r2;
