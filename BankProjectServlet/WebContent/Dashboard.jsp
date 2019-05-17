@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Navigation bar</title>
-<!-- <link rel="stylesheet"  href="./Styles/dash.css" type="text/css"> -->
+<title>Wieldy Bank</title>
+<link rel="stylesheet"  href="./Styles/Login.css" type="text/css">
 </head>
 <style>
 *{
@@ -93,19 +93,39 @@ nav ul li:hover ul li{
     <li><a href="#">Tamil Nadu</a></li>
 </ul>
 </li>
-<li><a href="#">Personal Banking</a>
+<li><a href="Registration.jsp">Apply Online</a>
+</li>
+<li><a href="Registration.jsp">Insta Bill Payment</a>
 <ul>
-  <li><a href="Login.jsp">Accounts</a></li>
-   <li><a href="#">Insta Bill Payment</a></li>
-    <li><a href="#">Loans</a></li>
-        <li><a href="#">Transactions</a></li>
+  <li><a href="#">TNEB Payment</a></li>
+   <li><a href="#">MOBILE Recharge</a></li>
+    
 </ul>
 </li>
 <li><a href="#">About us</a></li>
 <li><a href="#">Contact us</a></li>
 </ul>
 </nav>
+<form action="Loginservlet">
+<div class="login-box">
+<img src="./Images/avatar.png" class="avatar">
+
+<h3 align="center">Login Here</h3> 
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Username" name="userid">  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" name="password">
+  </div>
+
+  <input type="submit" class="btn" value="Sign in">
+  <table cellspacing="15"><td><a align="left" href="#">Forgot password?</a><span></td><td><a href="Registration.jsp"> New Register?</a></span></td>
+ </table>
+ </div>
+</form>
+  </body>
+</html>
 </body>
-</div>
-</div>
 </html>

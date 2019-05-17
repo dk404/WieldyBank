@@ -88,45 +88,21 @@ nav ul li:hover ul li{
 <div class="logo">
 <img src="./Images/logo.png" alt="No image"  width="150" height="100px">
 <ul>
-     <li><a href="#">Home</a></li>
-     <li><a href="#">Find Branch</a>
-<ul> 
-<li><a href="#">Andhra Pradesh</a></li>
-<li><a href="#">Karnataka</a></li>
-   <li><a href="#">Kerala</a></li>
-    <li><a href="#">Tamil Nadu</a></li>
-</ul>
-</li>
-<li><a href="#">Personal Banking</a>
+     <li><a href="#">My Profile</a></li>
+     <li><a href="checkbalance.jsp">Mini Statement</a></li>
+<li><a href="#">Transaction</a>
 <ul>
-  <li><a href="Login.jsp">Accounts</a></li>
-   <li><a href="#">Insta Bill Payment</a></li>
-    <li><a href="#">Loans</a></li>
-        <li><a href="#">Transactions</a></li>
+  <li><a href="">NEFT</a></li>
+   <li><a href="#">IMPS</a></li>
 </ul>
 </li>
-<li><a href="#">About us</a></li>
-<li><a href="#">Contact us</a></li>
+<li><a href="#">Loan</a></li>
+<li><a href="#">Update?</a></li>
+<li><a href="Logoutservlet">Logout</a></li>
 </ul>
 </nav>
 <form>
-<div class="login-box">
-<img src="./Images/avatar.png" class="avatar">
-
-<h3 align="center">Login Here</h3> 
-  <div class="textbox">
-    <i class="fas fa-user"></i>
-    <input type="text" placeholder="Username" name="userid">  </div>
-
-  <div class="textbox">
-    <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Password" name="password">
-  </div>
-
-  <input type="submit" class="btn" value="Sign in">
-  <table cellspacing="15"><td><a align="left" href="#">Forgot password?</a><span></td><td><a href="Registration.jsp"> New Register?</a></span></td>
- </table>
- </div>
+<h2>Wiedly Bank</h2>
 </form>
   </body>
 </html>

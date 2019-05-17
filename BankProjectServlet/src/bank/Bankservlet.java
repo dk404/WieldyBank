@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
 
@@ -52,6 +53,10 @@ public class Bankservlet extends HttpServlet {
 		String mobilenumber=(request.getParameter("mobilenumber"));
 		String mailid=request.getParameter("mailid");
 		String branch_location=request.getParameter("branch_location");
+		String userid1;
+		String password1;
+		String accountnumber1;
+
 		String[] m1=((mobilenumber.split("")));
 		String[] mob=new String[10];
 		 StringBuilder mob1=new StringBuilder();
@@ -80,6 +85,7 @@ public class Bankservlet extends HttpServlet {
 		 String password=(firstname.substring((firstname.length()-2), firstname.length()))+lastname.substring(0,2)+(idnumber.substring(0, 2))+mob1+sb1;
 		 String userid=(firstname.substring(0, 2))+(lastname.substring((lastname.length()-2), lastname.length()))+r2;
 		 Long accountnumber=(long) a;
+		 String account_balance=request.getParameter("account_balance");
 		 
 				try
 				{
@@ -87,7 +93,7 @@ public class Bankservlet extends HttpServlet {
 					
 					DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 					Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-					String sql="insert into hemaa.My_profiles values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					String sql="insert into hemaa.My_profiles values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 					PreparedStatement ps=c.prepareStatement(sql);
 					ps.setLong(1, accountnumber);
 					ps.setString(2, firstname);
@@ -104,18 +110,34 @@ public class Bankservlet extends HttpServlet {
 					ps.setString(12, userid);
 					ps.setString(13, password);
 					ps.setLong(14, accountnumber);
+					ps.setString(15,account_balance);
 					int result=ps.executeUpdate();
 					if(result>0)
 					{
-						request.getRequestDispatcher("userid.jsp").include(request,response); 
-						 out.println("<html><body>");
-				         out.println("<script type=\"text/javascript\">");
-				         out.println("alert('Successfully Created');");
-				         out.println("alert('User Id: "+userid+"');");
-				         out.println("alert('Password :"+password+"');");
-				         out.println("alert('Account Number :"+accountnumber+"');");
-				         out.println("</script>");
-				       
+
+						out.println("<html><body>");
+						out.println("<script type=\"text/javascript\">");
+						out.println("alert('Successfully Created');");
+						out.println("</script>");
+				
+				  String sql1="select *  from hemaa.my_profiles where idnumber=?";
+				  PreparedStatement ps1=c.prepareStatement(sql1);
+				  ps1.setString(1, idnumber);
+				  ResultSet rs1=ps1.executeQuery();
+				  if(rs1.next())
+				  {
+					   userid1=rs1.getString("userid");
+					  System.out.println(rs1.getString("userid"));
+					  System.out.println(userid1);
+					   password1=rs1.getString("password");
+					  accountnumber1=rs1.getString("accountnumber");
+					  
+					  request.setAttribute("userid",userid1);
+					  request.setAttribute("accountnumber",accountnumber1);
+					  request.setAttribute("password",password1);
+					  System.out.println("success");
+					  request.getRequestDispatcher("idaccount.jsp").include(request,response);
+				  }
 					}
 					
 					else
