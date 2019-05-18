@@ -58,14 +58,18 @@ public class Bankbalanceservlet extends HttpServlet {
 		  {
 			request.setAttribute("accountnumber", rs.getString("accountnumber"));
 			request.setAttribute("account_balance", rs.getString("account_balance"));
-			request.getRequestDispatcher("bankbalance.jsp").include(request,response);		  }
+			request.getRequestDispatcher("bankbalance.jsp").include(request,response);		  
+		  }
 		
 		else
-		{
-			out.println("<script>alert('Invalid account number')</script>");
+		  {
+			out.println("<html><body>");
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('Invalid Account Number');");
+			out.println("</script>");
 			response.sendRedirect("checkbalance.jsp");
-		}
-	}
+		  }
+	    }
 		catch(SQLException e)
 		{
 			e.printStackTrace();

@@ -45,12 +45,16 @@ public class Addbeneficiaryservlet extends HttpServlet {
 		try
 		{
 			PrintWriter out=response.getWriter();
-			String beneficiary_short_name=request.getParameter("bef_sname");
-			String beneficiary_name=request.getParameter("bef_name");
-			String account_no=request.getParameter("bef_accno");
+			String beneficiary_short_name=request.getParameter("b_sname");
+			String beneficiary_name=request.getParameter("b_name");
+			String account_no=request.getParameter("b_accno");
+			String c_account_no=request.getParameter("c_accno");
 			String ifsc_code=request.getParameter("ifsc");
 			String bank_name=request.getParameter("bankname");
 			String branch_name=request.getParameter("branchname");
+			
+			if(account_no.equals(c_account_no))
+			{
 			DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 			Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 			String sql="insert into hemaa.add_beneficiary values(?,?,?,?,?,?)";
@@ -76,13 +80,13 @@ public class Addbeneficiaryservlet extends HttpServlet {
 				request.setAttribute("bank_name", bank_name);
 				request.setAttribute("branch_name",branch_name);
 
-			  request.getRequestDispatcher("idaccount.jsp").include(request,response);
+			  request.getRequestDispatcher("display_addbeneficiary.jsp").include(request,response);
 			}
 			else
 			{
 				request.getRequestDispatcher("Add_beneficiary.jsp").include(request,response);
 			}
-			
+			}
 			
 	
 		}

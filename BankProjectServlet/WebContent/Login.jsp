@@ -93,11 +93,18 @@ nav ul li:hover ul li{
 <li><a href="#">Transaction</a>
 <ul>
   <li><a href="">NEFT</a></li>
-   <li><a href="#">IMPS</a></li>
+   <li><a href="">IMPS</a></li>
 </ul>
 </li>
 <li><a href="#">Loan</a></li>
-<li><a href="#">Update?</a></li>
+<li><a href="#">Update?</a>
+<ul>
+  <li><a href="Password.jsp">Change Password?</a></li>
+   <li><a href="mobile.jsp">Update mobile number</a></li>
+      <li><a href="mail.jsp">Update Mail Id</a></li>
+   
+</ul>
+</li>
 <li><a href="Logoutservlet">Logout</a></li>
 </ul>
 </nav>

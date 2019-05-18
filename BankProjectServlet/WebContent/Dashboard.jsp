@@ -97,7 +97,7 @@ nav ul li:hover ul li{
 </li>
 <li><a href="Registration.jsp">Insta Bill Payment</a>
 <ul>
-  <li><a href="#">TNEB Payment</a></li>
+  <li><a href="https://www.tnebnet.org/awp/login;jsessionid=IkLSlQU2JYJ+ZREtsK4RnDko">TNEB Payment</a></li>
    <li><a href="#">MOBILE Recharge</a></li>
     
 </ul>

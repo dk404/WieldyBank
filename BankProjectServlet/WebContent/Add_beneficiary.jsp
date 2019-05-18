@@ -17,19 +17,16 @@ text-decoration: underline;
 text-align: left;
 width: 20%;
 }
-
-
-
 </style>
 </head>
 <body>
 <form name="AddBef" action="Addbeneficiaryservlet" method="post" onsubmit="return doValidate()">
 <table align="center" cellpadding="1">
-
-<tr><td>Beneficiary Short Name</td> <td><input type="text" name="bef_SName">
-<tr><td>Beneficiary Name</td> <td><input type="text" name="bef_Name">
-<tr><td>Beneficiary Account Number</td>  <td><input type="text" name="bef_AccNo"></td></tr>
-<tr><td>Confirm Account Number</td>  <td><input type="text" name="Con_AccNo"></td></tr>
+ 
+<tr><td>Beneficiary Short Name</td> <td><input type="text" name="b_sname">
+<tr><td>Beneficiary Name</td> <td><input type="text" name="b_name">
+<tr><td>Beneficiary Account Number</td>  <td><input type="text" name="b_accno"></td></tr>
+<tr><td>Confirm Account Number</td>  <td><input type="text" name="c_accno"></td></tr>
 <tr><td>IFSC Code</td>  <td><input type="text" name="ifsc"></td></tr>
 <tr><td>Bank Name</td>  <td><input type="text" name="bankname"></td></tr>
 <tr><td>Branch Name</td>  <td><input type="text" name="branchname"></td></tr>
@@ -42,6 +39,7 @@ width: 20%;
 
 function doValidate()
 {
+var b_sname=document.forms["AddBef"]["b_sname"];
 var bef_name=document.forms["AddBef"]["bef_Name"];
 var acc_type=document.forms["AddBef"]["acc_type"];
 var bef_accNo=document.forms["AddBef"]["bef_AccNo"];

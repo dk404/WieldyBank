@@ -103,13 +103,13 @@ public class Bankservlet extends HttpServlet {
 					ps.setString(5, gender);
 					ps.setString(6, address);
 					ps.setString(7,idproof);
-					ps.setString(8, idnumber);
+					ps.setString(8,idnumber);
 					ps.setString(9,branch_location);
-					ps.setString(10, mobilenumber);
+					ps.setString(10,mobilenumber);
 					ps.setString(11,mailid);
-					ps.setString(12, userid);
-					ps.setString(13, password);
-					ps.setLong(14, accountnumber);
+					ps.setString(12,userid);
+					ps.setString(13,password);
+					ps.setLong(14,accountnumber);
 					ps.setString(15,account_balance);
 					int result=ps.executeUpdate();
 					if(result>0)
@@ -138,13 +138,15 @@ public class Bankservlet extends HttpServlet {
 					  System.out.println("success");
 					  request.getRequestDispatcher("idaccount.jsp").include(request,response);
 				  }
-					}
-					
+				}
 					else
 					{
-						System.out.println("error");
+						out.println("<html><body>");
+						out.println("<script type=\"text/javascript\">");
+						out.println("alert('Not created');");
+						out.println("</script>");
 					}
-			
+					
 				}
 				catch(SQLException e)
 				{

@@ -119,7 +119,7 @@ select {
 </style>
 </head>
 <body>
-<form>
+<form  name="RegForm" action="Bankservlet" method="post" id="register"  onsubmit="return doValidate()">  
 <div class="login-box">
 <h1><b>Sign Up</b></h1> 
   <div class="inner">
@@ -146,6 +146,8 @@ select {
     <option class="textbox" value="Driving License">Driving License</option>
     </select>
     <i class="fas fa-address-card custa"></i>
+    
+    
     <input type="text" placeholder="Enter proofid" name="idnumber" class="ip1">
   	<br><br>
     <i class="fas fa-map-marked-alt cust"></i>
@@ -160,7 +162,7 @@ select {
     <input type="number" placeholder="Deposit Initial Amount" name="account_balance" class="ip1">
   <br><br>
    <i class="fas fa-blender-phone custa"></i>
-  <input type="email" name="mobilenumber" id="name" placeholder="Mobile Number" class="add">
+  <input type="text" name="mobilenumber" id="name" placeholder="Mobile Number" class="add">
  <br><br>
   
     <i class="fas fa-mail-bulk cust"></i>
@@ -171,4 +173,94 @@ select {
 </div>
 </form>
 </body>
+<script>
+function doValidate()
+{
+
+var firstname=document.forms["RegForm"]["firstname"];
+var lastname=document.forms["RegForm"]["lastname"];
+var dob=document.forms["RegForm"]["dob"];
+var gender=document.forms["RegForm"]["gender"];
+var address=document.forms["RegForm"]["address"];
+var idproof=document.forms["RegForm"]["idproof"];
+var idnumber=document.forms["RegForm"]["idnumber"];
+var mobilenumber=document.forms["RegForm"]["mobilenumber"];
+var mailid=document.forms["RegForm"]["mailid"];
+
+if (firstname.value == "") {
+	window.alert("Please enter your first name.");
+	firstname.focus();
+	return false;
+}
+
+if (lastname.value == "") {
+	window.alert("Please enter your last name.");
+	lastname.focus();
+	return false;
+}
+
+
+
+if (dob.value == "") {
+	window.alert("Please enter your DOB");
+	dob.focus();
+	return false;
+}
+
+if (gender.value == "") {
+	window.alert("Please select gender.");
+	gender.focus();
+	return false;
+}
+
+if (address.value == "") {
+	window.alert("Please enter your address.");
+	address.focus();
+	return false;
+}
+
+if (idproof.selectedIndex < 1) {
+	window.alert("Please select the idproof.");
+	idproof.focus();
+	if(!(idproof.value).equals("Aadhar card"))
+	{
+	if(!(idnumber.value).length()==12)
+	window.alert("Enter the valid aadhar card number.");
+	idproof.focus();
+		
+	return false;
+	}
+	return false;
+}
+
+if (idnumber.value == "") {
+	window.alert("Please enter your address.");
+	address.focus();
+	return false;
+}
+
+
+
+if (mobilenumber.value == "") {
+	window.alert("Please enter your mobile number.");
+	mobilenumber.focus();
+	return false;
+}
+var phoneno = /^\d{10}$/;
+alert(phoneno);
+if((mobilenumber.value )==phoneno)
+{  
+	alert('Not a valid Phone Number');
+	mobilenumber.focus();
+    return false;
+}
+if (mailid.value == "") {
+	window.alert("Please enter your mailid.");
+	mailid.focus();
+	return false;
+}
+return true;
+}
+</script>
 </html>
+

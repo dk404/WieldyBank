@@ -58,7 +58,6 @@ public class useridservlet extends HttpServlet {
 			String sql="update Hemaa.my_profiles set userid=? where accountnumber=?";
 			PreparedStatement ps=c.prepareStatement(sql);
 			ps.setString(1, confirmuserid);
-			System.out.println(accountnumber);
 			ps.setString(2, accountnumber);
 			int result=ps.executeUpdate();
 			if(result>0)
@@ -72,6 +71,7 @@ public class useridservlet extends HttpServlet {
 			
 			else
 			{
+				request.getRequestDispatcher("userid.jsp").include(request,response);
 			}
 			}
 		}
