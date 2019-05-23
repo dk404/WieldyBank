@@ -78,7 +78,7 @@ nav ul li:hover ul li{
 }
 </style>
 <body style=
-"background-image: url(./Images/bgimage.jpg);
+"background-image: url(./Images/final.jpg);
    background-size:cover;
   background-position: center;
   background-repeat: no-repeat;

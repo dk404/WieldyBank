@@ -15,7 +15,7 @@ margin-left: 250px;
 </style>
 
 </head>
-<body style="background-image: url(./Images/mainpage.jpg);
+<body style="background-image: url(./image/mainpage.jpg);
 webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

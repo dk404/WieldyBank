@@ -16,7 +16,7 @@
 .avatar{
     width: 100px;
     height: 100px;
-    border-radius: 20%;
+    border-radius: 80%;
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
@@ -54,7 +54,7 @@ h1{
 .logins-box a{
     text-decoration: none;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.2);;
+    color: #fff;
 }
 .logins-box a:hover
 {
@@ -62,13 +62,13 @@ h1{
 }
 .login-box input[type="submit"]
 {
-    border: none;
+      border: none;
     outline: none;
     height: 40px;
-    background: #1c8adb;
-    color: #fff;
+    background: #eee;
+    color: #4d5047;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 .btn{

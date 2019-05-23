@@ -35,7 +35,7 @@ margin-left: 250px;
 </style>
 <script type="text/javascript" src="cal.js"></script>
 </head>
-<body style="background-image: url(./Images/mainpage.jpg);
+<body style="background-image: url(./image/mainpage.jpg);
 webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

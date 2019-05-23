@@ -78,7 +78,7 @@ nav ul li:hover ul li{
 }
 </style>
 <body style=
-"background-image: url(./Images/bgimage.jpg);
+"background-image: url(./Images/final.jpg);
    background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,7 +96,7 @@ nav ul li:hover ul li{
    <li><a href="">IMPS</a></li>
 </ul>
 </li>
-<li><a href="#">Loan</a></li>
+<li><a href="loanhome.jsp">Loan</a></li>
 <li><a href="#">Update?</a>
 <ul>
   <li><a href="Password.jsp">Change Password?</a></li>

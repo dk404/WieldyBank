@@ -84,7 +84,7 @@ nav ul li:hover ul li{
 <div class="logo">
 <img src="./Images/logo.png" alt="No image"  width="150" height="100px">
 <ul>
-     <li><a href="Login.jsp">Home</a></li>
+     <li><a href="Dashboard.jsp">Home</a></li>
      <li><a href="#">Find Branch</a>
 <ul> 
 <li><a href="#">Andhra Pradesh</a></li>
@@ -93,8 +93,7 @@ nav ul li:hover ul li{
     <li><a href="#">Tamil Nadu</a></li>
 </ul>
 </li>
-<li><a href="Registration.jsp">Apply Online</a>
-</li>
+
 <li><a href="Registration.jsp">Insta Bill Payment</a>
 <ul>
   <li><a href="https://www.tnebnet.org/awp/login;jsessionid=IkLSlQU2JYJ+ZREtsK4RnDko">TNEB Payment</a></li>
@@ -108,7 +107,7 @@ nav ul li:hover ul li{
 </nav>
 <form action="Loginservlet">
 <div class="login-box">
-<img src="./Images/avatar.png" class="avatar">
+<img src="./Images/avatarf.png" class="avatar">
 
 <h3 align="center">Login Here</h3> 
   <div class="textbox">

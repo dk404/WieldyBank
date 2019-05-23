@@ -16,7 +16,7 @@
 body{
 background-image: url("./Images/final.jpg");
    background-size:cover;
-  background-position: center;
+  background-position: inherit;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
