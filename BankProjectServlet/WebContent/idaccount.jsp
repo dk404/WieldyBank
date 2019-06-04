@@ -105,14 +105,12 @@ nav ul li:hover ul li{
 <li><a href="Logoutservlet">Logout</a></li>
 </ul>
 </nav>
-<form>
-  <form action="userid.jsp">
-  
-<table align="center" cellpadding="2">
+<form action="userid.jsp">
+  <table align="center" cellpadding="2">
 <tr><td>Account Number:</td><td><%=request.getAttribute("accountnumber") %></td></tr>
 <tr><td>User Id:</td><td><%=request.getAttribute("userid") %></td></tr>
 <tr><td>Password:</td><td><%=request.getAttribute("password") %></td></tr>
-<tr><td><input type="submit" value="Okay"><td></tr>
+<tr><td><input type="submit" value="Okay" ><td></tr>
 
 </table>
 

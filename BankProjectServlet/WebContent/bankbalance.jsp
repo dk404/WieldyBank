@@ -84,7 +84,7 @@ nav ul li:hover ul li{
 <div class="main">
 <nav>
 <div class="logo">
-<img src="./Images/logo.png" alt="No image"  width="150" height="100px">
+<img src="./Images/logo.png" alt="No image"  width="100" height="100px">
 <ul>
      <li><a href="#">My Profile</a></li>
      <li><a href="checkbalance.jsp">Mini Statement</a></li>
@@ -106,7 +106,7 @@ nav ul li:hover ul li{
 <li><a href="Logoutservlet">Logout</a></li>
 </ul>
 </nav>
-<form><form action="userid.jsp">
+<form action="userid.jsp">
 <table align="center" cellpadding="2">
 <tr><td>Account Number:</td><td><%=request.getAttribute("accountnumber") %></td></tr>
 <tr><td>Balance Amount:</td><td><%=request.getAttribute("account_balance") %></td></tr>

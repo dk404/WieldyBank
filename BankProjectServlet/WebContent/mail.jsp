@@ -86,7 +86,7 @@ nav ul li:hover ul li{
 <div class="logo">
 <img src="./Images/logo.png" alt="No image"  width="150" height="100px">
 <ul>
-     <li><a href="#">My Profile</a></li>
+     <li><a href="">My Profile</a></li>
      <li><a href="checkbalance.jsp">Mini Statement</a></li>
 <li><a href="#">Transaction</a>
 <ul>

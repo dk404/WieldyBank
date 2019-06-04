@@ -86,14 +86,14 @@ nav ul li:hover ul li{
 <div class="main">
 <nav>
 <div class="logo">
-<img src="./Images/logo.png" alt="No image"  width="150" height="100px">
+<img src="./Images/logo.png" alt="No image"  width="100" height="100px">
 <ul>
-     <li><a href="#">My Profile</a></li>
+     <li><a href="Login.jsp">My Profile</a></li>
      <li><a href="checkbalance.jsp">Mini Statement</a></li>
 <li><a href="#">Transaction</a>
 <ul>
-  <li><a href="">NEFT</a></li>
-   <li><a href="">IMPS</a></li>
+  <li><a href="NEFT.jsp">NEFT</a></li>
+   <li><a href="IMPS.jsp">IMPS</a></li>
 </ul>
 </li>
 <li><a href="loanhome.jsp">Loan</a></li>

@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Balance Enquiry</title>
+<title>Account Details</title>
 </head>
-<body>
+<body 
+>
 <style>
 *{
 	font-family:Times New Roman;
@@ -82,7 +83,7 @@ nav ul li:hover ul li{
 <div class="main">
 <nav>
 <div class="logo">
-<img src="./Images/logo.png" alt="No image"  width="100" height="100px">
+<img src="./Images/logo.png" alt="No image"  width="150" height="100px">
 <ul>
      <li><a href="#">My Profile</a></li>
      <li><a href="checkbalance.jsp">Mini Statement</a></li>
@@ -104,11 +105,22 @@ nav ul li:hover ul li{
 <li><a href="Logoutservlet">Logout</a></li>
 </ul>
 </nav>
-<form action="Bankbalanceservlet" method="post">
-<table>
-<tr><td>Account Number</td><td><input type="text" name="accountnumber"></td></tr>
-<tr><td><center><input type="submit" value="Submit"></center></td></tr>
+<form >
+  <table align="center" cellpadding="2">
+<tr><td>Account Number:</td><td><%=request.getAttribute("accountnumber") %></td></tr>
+<tr><td>User Id:</td><td><%=request.getAttribute("userid") %></td></tr>
+<tr><td>Password:</td><td><%=request.getAttribute("password") %></td></tr>
+<tr><td>First Name:</td><td><%=request.getAttribute("firstname") %></td></tr>
+<tr><td>Last Name:</td><td><%=request.getAttribute("lastname") %></td></tr>
+<tr><td>Address:</td><td><%=request.getAttribute("address") %></td></tr>
+<tr><td>Id Proof:</td><td><%=request.getAttribute("idproof") %></td></tr>
+<tr><td>Branch Location:</td><td><%=request.getAttribute("branch_location") %></td></tr>
+<tr><td>Mail Id:</td><td><%=request.getAttribute("mailid") %></td></tr>
+
+
+
 </table>
+
 </form>
 </body>
 </html>

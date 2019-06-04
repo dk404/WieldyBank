@@ -323,7 +323,7 @@ if (idproof.selectedIndex < 1) {
 	idproof.focus();
 	if(!(idproof.value).equals("Aadhar card"))
 	{
-	if(!(idnumber.value).length()==12)
+	if(!(idnumber.value).length()!=12)
 	window.alert("Enter the valid aadhar card number.");
 	idproof.focus();
 		

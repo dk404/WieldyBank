@@ -85,24 +85,16 @@ nav ul li:hover ul li{
 <img src="./Images/logo.png" alt="No image"  width="150" height="100px">
 <ul>
      <li><a href="Dashboard.jsp">Home</a></li>
-     <li><a href="#">Find Branch</a>
-<ul> 
-<li><a href="#">Andhra Pradesh</a></li>
-<li><a href="#">Karnataka</a></li>
-   <li><a href="#">Kerala</a></li>
-    <li><a href="#">Tamil Nadu</a></li>
-</ul>
-</li>
+     
 
-<li><a href="Registration.jsp">Insta Bill Payment</a>
+<li><a href="#">Insta Bill Payment</a>
 <ul>
   <li><a href="https://www.tnebnet.org/awp/login;jsessionid=IkLSlQU2JYJ+ZREtsK4RnDko">TNEB Payment</a></li>
-   <li><a href="#">MOBILE Recharge</a></li>
     
 </ul>
 </li>
-<li><a href="#">About us</a></li>
-<li><a href="#">Contact us</a></li>
+<li><a href="Aboutus.jsp">About us</a></li>
+<li><a href="Contactus.jsp">Contact us</a></li>
 </ul>
 </nav>
 <form action="Loginservlet">
